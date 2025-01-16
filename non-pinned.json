@@ -44,8 +44,8 @@
     },
     {
       "customType": "regex",
-      "fileMatch": ["^rust-toolchain.toml$"],
-      "matchStrings": ["nightly-channel = \"nightly-(?<currentValue>.+?)\"\\n"],
+      "fileMatch": ["(^|/)rust-toolchain\\.toml?$"],
+      "matchStrings": ["nightly-channel\\s*=\\s*\"nightly-(?<currentValue>.+?)\"\\n"],
       "versioningTemplate": "regex:^(?<major>\\d{4})-(?<minor>\\d{2})-(?<patch>\\d{2})$",
       "datasourceTemplate": "custom.rust-nightly",
       "depNameTemplate": "rust-nightly"
